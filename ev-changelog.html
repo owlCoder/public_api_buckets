@@ -1,1 +1,86 @@
-- Init
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+  <div style="width:36px;height:36px;border-radius:10px;background:var(--s-icon-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--s-accent)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+    </svg>
+  </div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:var(--s-text)">Evidentiraj</div>
+    <div style="font-size:11px;color:var(--s-muted);margin-top:1px">Istorija izmena</div>
+  </div>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-badge ev-badge-latest">Najnovije</span>
+    <span class="ev-version">v1.3.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li>Podešavanja: dodate ikone uz naslove sekcija (Izgled, Nalog, O aplikaciji)</li>
+    <li>Studenti sada vide iste informacije o profilu kao i asistenti</li>
+    <li>Studenti mogu da deaktiviraju sopstveni nalog iz podešavanja</li>
+    <li>Dugmad u formi za promenu lozinke i deaktivaciju naloga ujednačena sa ostatkom aplikacije</li>
+    <li>Ispravljen stil dugmadi "Otkaži" i "Sačuvaj lozinku" — ikone i boje sada konzistentne</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.2.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li>Dodata podrška za tabele bodova (ScoreSheets) sa dinamičkim kolonama</li>
+    <li>Asistenti mogu kreirati, uređivati i brisati tabele bodova po predmetu</li>
+    <li>Izvoz tabele bodova u PDF format</li>
+    <li>Poboljšan panel za upravljanje asistentima na predmetu</li>
+    <li>Notifikaciono zvonce sa pregledom nepročitanih poruka</li>
+    <li>Pagination na stranicama sa listama studenata i sesija</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.1.0</span>
+    <span class="ev-date">Februar 2026</span>
+  </div>
+  <ul>
+    <li>QR kod skeniranje za evidenciju prisustva studenata</li>
+    <li>Student dashboard sa pregledom prisustva po predmetima</li>
+    <li>Heatmapa prisustva po danima i nedeljama</li>
+    <li>Statistike: radijalni progress, grafici distribucije, trend grafik</li>
+    <li>Podrška za svetlu i tamnu temu aplikacije</li>
+    <li>Asistent može resetovati lozinku studenta</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.0.0</span>
+    <span class="ev-date">Januar 2026</span>
+  </div>
+  <ul>
+    <li>Inicijalno pokretanje aplikacije Evidentiraj</li>
+    <li>Registracija i prijava studenata i asistenata</li>
+    <li>Upravljanje predmetima — kreiranje, uređivanje, brisanje</li>
+    <li>Upravljanje sesijama prisustva po predmetu</li>
+    <li>Pregled i pretraga studenata upisanih na predmet</li>
+    <li>Izvoz izveštaja o prisustvu u PDF</li>
+    <li>Promena lozinke za sve korisnike</li>
+  </ul>
+</div>
+
+<style>
+  .ev-release { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--s-border); }
+  .ev-release:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ev-release-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .ev-version { font-size: 13px; font-weight: 700; color: var(--s-text); }
+  .ev-date { font-size: 11px; color: var(--s-muted); margin-left: auto; }
+  .ev-badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; }
+  .ev-badge-latest { background: rgba(34,197,94,0.12); color: #22c55e; border: 1px solid rgba(34,197,94,0.25); }
+  .ev-release ul { padding-left: 0; list-style: none; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+  .ev-release li { font-size: 12px; color: var(--s-text-soft); padding-left: 16px; position: relative; line-height: 1.5; }
+  .ev-release li::before { content: "–"; position: absolute; left: 0; color: var(--s-muted); }
+</style>
