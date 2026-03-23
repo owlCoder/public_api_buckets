@@ -1,28 +1,43 @@
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-  <div style="width:36px;height:36px;border-radius:10px;background:var(--s-icon-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--s-accent)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+  <div style="width:40px;height:40px;border-radius:12px;background:var(--s-icon-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--s-accent)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
       <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
     </svg>
   </div>
   <div>
-    <div style="font-size:13px;font-weight:700;color:var(--s-text)">Evidentiraj</div>
-    <div style="font-size:11px;color:var(--s-muted);margin-top:1px">Istorija izmena</div>
+    <div style="font-size:15px;font-weight:700;color:var(--s-text)">Evidentiraj</div>
+    <div style="font-size:12px;color:var(--s-muted);margin-top:2px">Istorija izmena i novosti</div>
   </div>
 </div>
 
 <div class="ev-release">
   <div class="ev-release-header">
     <span class="ev-badge ev-badge-latest">Najnovije</span>
+    <span class="ev-version">v1.4.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Mobilna optimizacija:</strong> Poboljšan prikaz podešavanja na mobilnim uređajima, dugmad za odjavu i podešavanja premještena u mobilni meni</li>
+    <li><strong>About sekcija:</strong> Ograničena maksimalna širina sadržaja za bolje čitanje na mobilnim ekranima, dodato horizontalno skrolovanje za širi sadržaj</li>
+    <li><strong>Poboljšanja teme:</strong> Fino podešene boje za tamnu temu, bolji kontrast i čitljivost</li>
+    <li><strong>Animacije:</strong> Dodate glatke tranzicije prilikom otvaranja/zatvaranja dijaloga i menija</li>
+    <li><strong>Ispravke bagova:</strong> Popravljen prikaz notifikacija na dashboardu, ispravljeno sortiranje termina po datumu</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
     <span class="ev-version">v1.3.0</span>
     <span class="ev-date">Mart 2026</span>
   </div>
   <ul>
-    <li>Podešavanja: dodate ikone uz naslove sekcija (Izgled, Nalog, O aplikaciji)</li>
-    <li>Studenti sada vide iste informacije o profilu kao i asistenti</li>
-    <li>Studenti mogu da deaktiviraju sopstveni nalog iz podešavanja</li>
-    <li>Dugmad u formi za promenu lozinke i deaktivaciju naloga ujednačena sa ostatkom aplikacije</li>
-    <li>Ispravljen stil dugmadi "Otkaži" i "Sačuvaj lozinku" — ikone i boje sada konzistentne</li>
+    <li><strong>Podešavanja:</strong> Redizajniran SettingsDialog sa novom navigacijom, dodate ikone uz naslove sekcija (Izgled, Nalog, O aplikaciji)</li>
+    <li><strong>Profil:</strong> Studenti sada vide iste informacije o profilu kao i asistenti (ime, email, datum kreiranja naloga)</li>
+    <li><strong>Deaktivacija naloga:</strong> Studenti mogu da deaktiviraju sopstveni nalog iz podešavanja (opciono, uz unos lozinke)</li>
+    <li><strong>UI/UX poboljšanja:</strong> Dugmad u formi za promenu lozinke i deaktivaciju naloga ujednačena sa ostatkom aplikacije</li>
+    <li><strong>Ispravke:</strong> Ispravljen stil dugmadi "Otkaži" i "Sačuvaj lozinku" — ikone i boje sada konzistentne na svim ekranima</li>
+    <li><strong>Lokalizacija:</strong> Dodati prevodi za sve poruke u podešavanjima</li>
   </ul>
 </div>
 
@@ -32,12 +47,13 @@
     <span class="ev-date">Mart 2026</span>
   </div>
   <ul>
-    <li>Dodata podrška za tabele bodova (ScoreSheets) sa dinamičkim kolonama</li>
-    <li>Asistenti mogu kreirati, uređivati i brisati tabele bodova po predmetu</li>
-    <li>Izvoz tabele bodova u PDF format</li>
-    <li>Poboljšan panel za upravljanje asistentima na predmetu</li>
-    <li>Notifikaciono zvonce sa pregledom nepročitanih poruka</li>
-    <li>Pagination na stranicama sa listama studenata i sesija</li>
+    <li><strong>Tabele bodova (ScoreSheets):</strong> Dodata podrška za dinamičke tabele bodova sa prilagodljivim kolonama (kolokvijumi, projekti, aktivnosti)</li>
+    <li><strong>Upravljanje bodovima:</strong> Asistenti mogu kreirati, uređivati i brisati tabele bodova po predmetu, unositi i ažurirati bodove za studente</li>
+    <li><strong>Izvoz podataka:</strong> Izvoz tabele bodova u PDF format sa sažetkom i statistikom</li>
+    <li><strong>Asistenti na predmetu:</strong> Poboljšan panel za upravljanje asistentima — dodavanje i uklanjanje asistenata sa predmeta</li>
+    <li><strong>Notifikacije:</strong> Notifikaciono zvonce sa pregledom nepročitanih poruka i obaveštenja</li>
+    <li><strong>Paginacija:</strong> Dodata paginacija na stranicama sa listama studenata (50 po strani) i sesijama (20 po strani)</li>
+    <li><strong>Pretraga:</strong> Unapređena pretraga studenata po imenu, prezimenu i indeksu</li>
   </ul>
 </div>
 
@@ -47,12 +63,13 @@
     <span class="ev-date">Februar 2026</span>
   </div>
   <ul>
-    <li>QR kod skeniranje za evidenciju prisustva studenata</li>
-    <li>Student dashboard sa pregledom prisustva po predmetima</li>
-    <li>Heatmapa prisustva po danima i nedeljama</li>
-    <li>Statistike: radijalni progress, grafici distribucije, trend grafik</li>
-    <li>Podrška za svetlu i tamnu temu aplikacije</li>
-    <li>Asistent može resetovati lozinku studenta</li>
+    <li><strong>QR kod skeniranje:</strong> Implementirano skeniranje QR koda za brzu evidenciju prisustva studenata na vežbama i predavanjima</li>
+    <li><strong>Student dashboard:</strong> Pregled prisustva po predmetima sa vizuelnim indikatorima (procenti, trake napretka)</li>
+    <li><strong>Heatmapa prisustva:</strong> Vizuelni prikaz prisustva po danima i nedeljama u vidu toplotne mape</li>
+    <li><strong>Statistike:</strong> Radijalni progress grafikoni za ukupno prisustvo, grafici distribucije prisustva po predmetima, trend grafik po nedeljama</li>
+    <li><strong>Tamna tema:</strong> Dodata podrška za svetlu i tamnu temu aplikacije sa automatskim čuvanjem preferenci</li>
+    <li><strong>Administracija:</strong> Asistent može resetovati lozinku studenta direktno sa stranice profila</li>
+    <li><strong>Filteri:</strong> Dodati filteri po datumu i tipu sesije na stranici prisustava</li>
   </ul>
 </div>
 
@@ -62,25 +79,99 @@
     <span class="ev-date">Januar 2026</span>
   </div>
   <ul>
-    <li>Inicijalno pokretanje aplikacije Evidentiraj</li>
-    <li>Registracija i prijava studenata i asistenata</li>
-    <li>Upravljanje predmetima — kreiranje, uređivanje, brisanje</li>
-    <li>Upravljanje sesijama prisustva po predmetu</li>
-    <li>Pregled i pretraga studenata upisanih na predmet</li>
-    <li>Izvoz izveštaja o prisustvu u PDF</li>
-    <li>Promena lozinke za sve korisnike</li>
+    <li><strong>Inicijalno pokretanje:</strong> Prva stabilna verzija aplikacije Evidentiraj</li>
+    <li><strong>Autentifikacija:</strong> Registracija i prijava studenata i asistenata sa JWT tokenom</li>
+    <li><strong>Upravljanje predmetima:</strong> Kreiranje, uređivanje, arhiviranje i brisanje predmeta</li>
+    <li><strong>Sesije prisustva:</strong> Upravljanje sesijama po predmetu — kreiranje termina, evidencija prisustva, zaključavanje sesija</li>
+    <li><strong>Upisani studenti:</strong> Pregled i pretraga studenata upisanih na predmet, masovni upis preko CSV fajla</li>
+    <li><strong>Izveštaji:</strong> Izvoz izveštaja o prisustvu u PDF format sa detaljima po studentu</li>
+    <li><strong>Bezbednost:</strong> Promena lozinke za sve korisnike, validacija sesija i autorizacija na endpoints</li>
+    <li><strong>Responsive dizajn:</strong> Prilagođen prikaz na desktop, tablet i mobilnim uređajima</li>
   </ul>
 </div>
 
 <style>
-  .ev-release { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--s-border); }
-  .ev-release:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .ev-release-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-  .ev-version { font-size: 13px; font-weight: 700; color: var(--s-text); }
-  .ev-date { font-size: 11px; color: var(--s-muted); margin-left: auto; }
-  .ev-badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; }
-  .ev-badge-latest { background: rgba(34,197,94,0.12); color: #22c55e; border: 1px solid rgba(34,197,94,0.25); }
-  .ev-release ul { padding-left: 0; list-style: none; margin: 0; display: flex; flex-direction: column; gap: 5px; }
-  .ev-release li { font-size: 12px; color: var(--s-text-soft); padding-left: 16px; position: relative; line-height: 1.5; }
-  .ev-release li::before { position: absolute; left: 0; color: var(--s-muted); }
+  .ev-release { 
+    margin-bottom: 24px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px solid var(--s-border);
+    transition: all 0.2s ease;
+  }
+  .ev-release:last-of-type { 
+    border-bottom: none; 
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+  }
+  .ev-release-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 12px; 
+    flex-wrap: wrap; 
+  }
+  .ev-version { 
+    font-size: 14px; 
+    font-weight: 700; 
+    color: var(--s-text);
+    font-family: ui-monospace, monospace;
+  }
+  .ev-date { 
+    font-size: 11px; 
+    color: var(--s-muted); 
+    margin-left: auto;
+    letter-spacing: 0.3px;
+  }
+  .ev-badge { 
+    font-size: 10px; 
+    font-weight: 600; 
+    padding: 3px 8px; 
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+  }
+  .ev-badge-latest { 
+    background: rgba(34,197,94,0.12); 
+    color: #22c55e; 
+    border: 1px solid rgba(34,197,94,0.25);
+  }
+  .ev-release ul { 
+    padding-left: 0; 
+    list-style: none; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+  }
+  .ev-release li { 
+    font-size: 12.5px; 
+    color: var(--s-text-soft); 
+    padding-left: 20px; 
+    position: relative; 
+    line-height: 1.5;
+  }
+  .ev-release li::before { 
+    content: "•";
+    position: absolute; 
+    left: 6px; 
+    color: var(--s-accent);
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .ev-release li strong {
+    color: var(--s-text);
+    font-weight: 600;
+  }
+  
+  /* Mobilna optimizacija */
+  @media (max-width: 640px) {
+    .ev-release li {
+      font-size: 12px;
+      padding-left: 18px;
+    }
+    .ev-release li::before {
+      left: 4px;
+    }
+    .ev-version {
+      font-size: 13px;
+    }
+  }
 </style>
