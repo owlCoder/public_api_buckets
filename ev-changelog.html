@@ -14,6 +14,21 @@
 <div class="ev-release">
   <div class="ev-release-header">
     <span class="ev-badge ev-badge-latest">Najnovije</span>
+    <span class="ev-version">v1.7.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Provera upisa pri skeniranju</strong> – Student koji nije upisan na predmet ne može evidentirati prisustvo skeniranjem QR koda</li>
+    <li><strong>Zaštita notifikacija</strong> – Obaveštenja o izostancima se više ne šalju studentima koji nisu upisani na predmet</li>
+    <li><strong>Sortiranje tabele bodova</strong> – Redovi se sortiraju po broju indeksa primarno, a po godini upisa sekundarno (format PR 55/2020)</li>
+    <li><strong>Eksport prati sortiranje</strong> – PDF i Excel izvoz tabele bodova čuvaju redosled koji je aktivan u tabeli</li>
+    <li>Ispravke stilova zaglavlja kolona u tabeli bodova – ujednačen padding i hover efekat</li>
+    <li>Akcije u meniju kolone (izmeni, sakrij, obriši) prikazuju boju samo na tekstu, bez pozadine</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
     <span class="ev-version">v1.6.5</span>
     <span class="ev-date">Mart 2026</span>
   </div>
@@ -170,7 +185,7 @@
     line-height: 1.5;
   }
   .ev-release li::before { 
-    content: "▹";
+    content: "•";
     position: absolute; 
     left: 4px; 
     color: var(--s-accent);
