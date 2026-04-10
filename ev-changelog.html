@@ -10,9 +10,16 @@
     <div style="font-size:12px;color:var(--s-muted);margin-top:2px">Istorija izmena i novosti</div>
   </div>
 </div>
+<div class="ev-release"> <div class="ev-release-header"> <span class="ev-badge ev-badge-latest">Najnovije</span> <span class="ev-version">v2.0</span> <span class="ev-date">April 2026</span> </div>
+  <ul> <li><strong>Potpuna React Query migracija</strong> – Celokupna aplikacija sada koristi React Query za keširanje, pozadinsko osvežavanje i paralelne zahteve. Nestali su <code>useEffect</code> + <code>useState</code> vodopadi – podaci se učitavaju do 3x brže.</li> 
+    <li><strong>Trenutna evidencija bodova</strong> – Izmene u tabeli (ćelije, kolone, redovi, uvoz) ažuriraju keš odmah, bez dodatnih round-trip zahteva. Rad sa bodovnom listom je sada instant.</li>
+    <li><strong>Filtriranje bez zaostajanja</strong> – <code>useDeferredValue</code> u svim pretragama (studenti, prisustva, tabele). Tabela bodova pri filtriranju prikazuje <strong>prigušenu (60% opacity)</strong> pozadinu dok se filter ne primeni – interfejs ostaje potpuno odzivan.</li> <li><strong>Prefetch na hover</strong> – Prelaskom miša preko kartice predmeta, lista upisanih studenata se unapred učitava. Panel sa spiskom se otvara trenutno, bez loading stanja.</li> 
+    <li><strong>Notifikacije bez polling‑a</strong> – <code>refetchInterval</code> umesto <code>setInterval</code>, uz optimistično ažuriranje keša pri čitanju. Badge nepročitanih se ažurira bez čekanja na server.</li>
+    <li><strong>Statistike i matrice prisustva</strong> – Paralelno izvršavanje upita umesto sekvencijalnog. Izveštaji se učitavaju upola vremena.</li> <li><strong>Ispravljeni zastareli podaci</strong> – Nakon ručnog ili grupnog dodavanja/brisanja prisustva, keševi statistika i matrice se automatski invalidiraju – brojke u izveštajima su uvek sveže.</li> <li>Sve forme i odgovori rade preko React Query mutacija sa direktnim upisom u keš.</li> 
+    <li>Stranice sa listama (studenti, prisustva, bodovne tabele) koriste <code>useMemo</code> filtriranje – pretraga ne usporava čak ni kod 1000+ redova.</li> </ul> </div>
+
 <div class="ev-release">
   <div class="ev-release-header">
-    <span class="ev-badge ev-badge-latest">Najnovije</span>
     <span class="ev-version">v1.9.0</span>
     <span class="ev-date">April 2026</span>
   </div>
