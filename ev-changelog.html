@@ -17,15 +17,29 @@
     <span class="ev-date">April 2026</span>
   </div>
   <ul>
-    <li><strong>Potpuna refaktorizacija po SOLID principima</strong> – Monolitne komponente razbijene u više manjih, fokusiranih delova (<code>Layout</code>, <code>StudentStatsTable</code>, <code>StatsPage</code>). Sada je kod lakši za testiranje, održavanje i proširenje.</li>
-    <li><strong>Nove komponente za grafikone</strong> – <code>CumulativeAttendanceChart</code> (kumulativni napredak) i <code>AbsenceSpikesChart</code> (šiljci odsustva) integrisani u <em>Pregled</em> tab. Grafikoni su potpuno responzivni i iste širine kao ostali grafikoni.</li>
-    <li><strong>Unifikacija statistika i izveštaja</strong> – Stranica <em>Statistike i izveštaji</em> sada objedinjuje ranije odvojene stranice. Tri glavna taba: <strong>Aktuelna distribucija</strong> (sa podtabovima Pregled, Poređenje, Najuspešniji), <strong>Detalji prisustva</strong> (tabela svih studenata) i <strong>Izveštaji</strong> (nedeljni/mesečni izveštaji).</li>
-    <li><strong>Tab „Najuspešniji“</strong> – <code>PerformerTable</code> premješten u poseban tab radi preglednosti.</li>
-    <li><strong>Redizajn izveštajnih kartica</strong> – <code>SubjectReportCard</code> dobija dva interna taba: <em>Pregled</em> (KPI, trend bar chart, najlošiji termini) i <em>Rizični studenti</em> (tabela studenata koji su na ivici ili prekoračili prag).</li>
-    <li><strong>Ispravka neispravnog uslova za „Rizik“</strong> – U <code>StudentStatsTable</code> ispravljena logika dodele statusa: <em>Rizik</em> sada stvarno dodeljuje studentima koji imaju između <code>prag+1</code> i <code>prag+2</code> izostanka (ranije nikad nije bio dodeljivan).</li>
-    <li><strong>Popravljen timer na QR karticama</strong> – Timer više ne resetuje pri navigaciji jer koristi apsolutni timestamp <code>expiresAt</code> umesto lokalnog <code>Date.now()</code>.</li>
-    <li><strong>Optimizacija i čišćenje koda</strong> – Uklonjeni neiskorišćeni importi, dodati <code>useMemo</code> i <code>useDeferredValue</code> tamo gde nedostaju. Folder struktura komponenti reorganizovana (<code>charts/</code>, <code>tables/</code>, <code>cards/</code>).</li>
-    <li>Svi delovi aplikacije sada rade sa ažuriranim keševima – nakon brisanja ili dodavanja prisustva, sve statistike se osvežavaju bez ručnog refresha.</li>
+    <li><strong>Potpuna refaktorizacija po SOLID principima</strong> – Monolitne komponente dekomponovane u više manjih celina (<code>Layout</code>, <code>StudentStatsTable</code>, <code>StatsPage</code>). Sada je kod
+      lakši za testiranje, održavanje i proširenje.</li>
+    <li><strong>Nove komponente za grafikone</strong> – <code>CumulativeAttendanceChart</code> (kumulativni napredak) i
+      <code>AbsenceSpikesChart</code> (grafik odsustva) integrisani u <em>Pregled</em> tab.</li>
+    <li><strong>Unifikacija statistika i izveštaja</strong> – Stranica <em>Statistike i izveštaja</em> sada objedinjuje
+      ranije odvojene stranice. Tri glavna taba: <strong>Aktuelna distribucija</strong> (sa podtabovima Pregled,
+      Poređenje, Najuspešniji), <strong>Detalji prisustva</strong> (tabela svih studenata) i <strong>Izveštaji</strong>
+      (nedeljni/mesečni izveštaji).</li>
+    <li><strong>Tab „Najuspešniji“</strong> – <code>PerformerTable</code> premešten u poseban tab radi preglednosti.
+    </li>
+    <li><strong>Redizajn izveštajnih kartica</strong> – <code>SubjectReportCard</code> dobija dva nova taba:
+      <em>Pregled</em> (KPI, trend bar chart, najlošiji termini) i <em>Rizični studenti</em> (tabela studenata koji su
+      na ivici ili prekoračili prag).</li>
+    <li><strong>Ispravka neispravnog uslova za „Rizik“</strong> – U <code>StudentStatsTable</code> ispravljena logika
+      dodele statusa: <em>Rizik</em> sada stvarno dodeljuje studentima koji imaju između <code>prag+1</code> i
+      <code>prag+2</code> izostanka (ranije nikad nije bio dodeljivan).</li>
+    <li><strong>Popravljen timer na QR karticama</strong> – Timer više ne resetuje pri navigaciji jer koristi apsolutni
+      timestamp <code>expiresAt</code> umesto lokalnog <code>Date.now()</code>.</li>
+    <li><strong>Optimizacija i čišćenje koda</strong> – Uklonjeni neiskorišćeni importi, dodati <code>useMemo</code> i
+      <code>useDeferredValue</code> tamo gde nedostaju. Folder struktura komponenti reorganizovana
+      (<code>charts/</code>, <code>tables/</code>, <code>cards/</code>).</li>
+    <li>Svi delovi aplikacije sada rade sa ažuriranim keševima – nakon brisanja ili dodavanja prisustva, sve statistike
+      se osvežavaju bez ručnog refresha.</li>
   </ul>
 </div>
 
