@@ -10,8 +10,6 @@
     <div style="font-size:12px;color:var(--s-muted);margin-top:2px">Istorija izmena i novosti</div>
   </div>
 </div>
-
-<!-- v2.5 – najnovije -->
 <div class="ev-release">
   <div class="ev-release-header">
     <span class="ev-badge ev-badge-latest">Najnovije</span>
@@ -19,7 +17,7 @@
     <span class="ev-date">April 2026</span>
   </div>
   <ul>
-    <li><strong>Potpuna refaktorizacija po SOLID principima</strong> – Monolitne komponente prepravljene u više manjih, fokusiranih delova (<code>Layout</code>, <code>StudentStatsTable</code>, <code>StatsPage</code>). Sada je kod lakši za testiranje, održavanje i proširenje.</li>
+    <li><strong>Potpuna refaktorizacija po SOLID principima</strong> – Monolitne komponente razbijene u više manjih, fokusiranih delova (<code>Layout</code>, <code>StudentStatsTable</code>, <code>StatsPage</code>). Sada je kod lakši za testiranje, održavanje i proširenje.</li>
     <li><strong>Nove komponente za grafikone</strong> – <code>CumulativeAttendanceChart</code> (kumulativni napredak) i <code>AbsenceSpikesChart</code> (šiljci odsustva) integrisani u <em>Pregled</em> tab. Grafikoni su potpuno responzivni i iste širine kao ostali grafikoni.</li>
     <li><strong>Unifikacija statistika i izveštaja</strong> – Stranica <em>Statistike i izveštaji</em> sada objedinjuje ranije odvojene stranice. Tri glavna taba: <strong>Aktuelna distribucija</strong> (sa podtabovima Pregled, Poređenje, Najuspešniji), <strong>Detalji prisustva</strong> (tabela svih studenata) i <strong>Izveštaji</strong> (nedeljni/mesečni izveštaji).</li>
     <li><strong>Tab „Najuspešniji“</strong> – <code>PerformerTable</code> premješten u poseban tab radi preglednosti.</li>
@@ -31,24 +29,13 @@
   </ul>
 </div>
 
-<!-- postojeći unosi (v2.0, v1.9.0, v1.8.2, …) ostaju nepromenjeni, samo su preskočeni radi sažetosti – u stvarnom fajlu bi stajali svi redom -->
-<div class="ev-release">
-  <div class="ev-release-header">
-    <span class="ev-version">v2.0</span>
-    <span class="ev-date">April 2026</span>
-  </div>
-  <ul>
-    <li><strong>Potpuna React Query migracija</strong> – Celokupna aplikacija sada koristi React Query za keširanje, pozadinsko osvežavanje i paralelne zahteve. Nestali su <code>useEffect</code> + <code>useState</code> vodopadi – podaci se učitavaju do 3x brže.</li>
+<div class="ev-release"> <div class="ev-release-header"> <span class="ev-version">v2.0</span> <span class="ev-date">April 2026</span> </div>
+  <ul> <li><strong>Potpuna React Query migracija</strong> – Celokupna aplikacija sada koristi React Query za keširanje, pozadinsko osvežavanje i paralelne zahteve. Nestali su <code>useEffect</code> + <code>useState</code> vodopadi – podaci se učitavaju do 3x brže.</li> 
     <li><strong>Trenutna evidencija bodova</strong> – Izmene u tabeli (ćelije, kolone, redovi, uvoz) ažuriraju keš odmah, bez dodatnih round-trip zahteva. Rad sa bodovnom listom je sada instant.</li>
-    <li><strong>Filtriranje bez zaostajanja</strong> – <code>useDeferredValue</code> u svim pretragama (studenti, prisustva, tabele). Tabela bodova pri filtriranju prikazuje <strong>prigušenu (60% opacity)</strong> pozadinu dok se filter ne primeni – interfejs ostaje potpuno odzivan.</li>
-    <li><strong>Prefetch na hover</strong> – Prelaskom miša preko kartice predmeta, lista upisanih studenata se unapred učitava. Panel sa spiskom se otvara trenutno, bez loading stanja.</li>
+    <li><strong>Filtriranje bez zaostajanja</strong> – <code>useDeferredValue</code> u svim pretragama (studenti, prisustva, tabele). Tabela bodova pri filtriranju prikazuje <strong>prigušenu (60% opacity)</strong> pozadinu dok se filter ne primeni – interfejs ostaje potpuno odzivan.</li> <li><strong>Prefetch na hover</strong> – Prelaskom miša preko kartice predmeta, lista upisanih studenata se unapred učitava. Panel sa spiskom se otvara trenutno, bez loading stanja.</li> 
     <li><strong>Notifikacije bez polling‑a</strong> – <code>refetchInterval</code> umesto <code>setInterval</code>, uz optimistično ažuriranje keša pri čitanju. Badge nepročitanih se ažurira bez čekanja na server.</li>
-    <li><strong>Statistike i matrice prisustva</strong> – Paralelno izvršavanje upita umesto sekvencijalnog. Izveštaji se učitavaju upola vremena.</li>
-    <li><strong>Ispravljeni zastareli podaci</strong> – Nakon ručnog ili grupnog dodavanja/brisanja prisustva, keševi statistika i matrice se automatski invalidiraju – brojke u izveštajima su uvek sveže.</li>
-    <li>Sve forme i odgovori rade preko React Query mutacija sa direktnim upisom u keš.</li>
-    <li>Stranice sa listama (studenti, prisustva, bodovne tabele) koriste <code>useMemo</code> filtriranje – pretraga ne usporava čak ni kod 1000+ redova.</li>
-  </ul>
-</div>
+    <li><strong>Statistike i matrice prisustva</strong> – Paralelno izvršavanje upita umesto sekvencijalnog. Izveštaji se učitavaju upola vremena.</li> <li><strong>Ispravljeni zastareli podaci</strong> – Nakon ručnog ili grupnog dodavanja/brisanja prisustva, keševi statistika i matrice se automatski invalidiraju – brojke u izveštajima su uvek sveže.</li> <li>Sve forme i odgovori rade preko React Query mutacija sa direktnim upisom u keš.</li> 
+    <li>Stranice sa listama (studenti, prisustva, bodovne tabele) koriste <code>useMemo</code> filtriranje – pretraga ne usporava čak ni kod 1000+ redova.</li> </ul> </div>
 
 <div class="ev-release">
   <div class="ev-release-header">
@@ -64,5 +51,217 @@
     <li>Poboljšana stabilnost i performanse panela za prisustvo</li>
   </ul>
 </div>
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.8.2</span>
+    <span class="ev-date">April 2026</span>
+  </div>
+  <ul>
+    <li><strong>Izvoz odgovora forme u PDF i Excel</strong> – Odgovori se sada mogu preuzeti kao PDF dokument ili Excel tabela</li>
+    <li><strong>Unapređeno slanje emailova</strong> – Povećana pouzdanost slanja 2FA kodova i notifikacija</li>
+    <li><strong>Ispravke prikaza detalja odgovora</strong> – Modal za pregled pojedinačnog odgovora sada ispravno prikazuje višestruke izbore i formatira tekst</li>
+    <li>Poboljšana stabilnost učitavanja formi i odgovora</li>
+  </ul>
+</div>
 
-<!-- Ostali unosi (v1.8.2, v1.7.0, v1.6.5, v1.6.0, v1.5.0, v1.4.0, v1.3.0, v1.2.0, v1.1.0) ostaju nepromenjeni – ovde su izostavljeni radi čitljivosti, ali u stvarnom fajlu bi stajali svi redom -->
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.7.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Provera upisa pri skeniranju</strong> – Student koji nije upisan na predmet ne može evidentirati prisustvo skeniranjem QR koda</li>
+    <li><strong>Zaštita notifikacija</strong> – Obaveštenja o izostancima se više ne šalju studentima koji nisu upisani na predmet</li>
+    <li><strong>Sortiranje tabele bodova</strong> – Redovi se sortiraju po broju indeksa primarno, a po godini upisa sekundarno (format PR 55/2020)</li>
+    <li><strong>Eksport prati sortiranje</strong> – PDF i Excel izvoz tabele bodova čuvaju redosled koji je aktivan u tabeli</li>
+    <li>Ispravke stilova zaglavlja kolona u tabeli bodova – ujednačen padding i hover efekat</li>
+    <li>Akcije u meniju kolone (izmeni, sakrij, obriši) prikazuju boju samo na tekstu, bez pozadine</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.6.5</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Uslovna logika u formama</strong> – Dinamičko prikazivanje pitanja na osnovu prethodnih odgovora</li>
+    <li><strong>Izveštaji o prisustvu unapređeni</strong> – Dodat pregled po danima i filtriranje po grupama</li>
+    <li><strong>Poboljšano skeniranje QR koda</strong> – Brže prepoznavanje i stabilniji rad na svim uređajima</li>
+    <li><strong>Eksport odgovora u Excel</strong> – Pored PDF‑a, sada dostupan i XLSX format za obradu podataka</li>
+    <li><strong>Optimizacija performansi</strong> – Brže učitavanje dugih lista i tabela bodova</li>
+    <li>Ispravke manjih grešaka u tamnoj temi i prikazu na mobilnim uređajima</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.6.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Dvofaktorska autentifikacija</strong> – Dodat opcioni sloj zaštite pri prijavi na nalog</li>
+    <li><strong>Kreiranje formi</strong> – Novi alat za kreiranje prilagođenih upitnika i prikupljanje odgovora</li>
+    <li><strong>Javni linkovi</strong> – Forme se mogu deliti putem javnog linka za popunjavanje bez prijave</li>
+    <li><strong>Pregled odgovora</strong> – Prikupljeni podaci prikazuju se u preglednoj tabeli sa mogućnošću izvoza</li>
+    <li><strong>Izveštaji o studentima</strong> – Poboljšan prikaz indeksa studenata ujednačen sa ostatkom aplikacije</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.5.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Poboljšanja za mobilne uređaje</strong> – Podešavanja i meni prilagođeni za bolje korišćenje na manjim ekranima</li>
+    <li><strong>Tamna tema</strong> – Dodatno poboljšan kontrast i čitljivost u tamnom režimu</li>
+    <li><strong>Animacije</strong> – Glatki prelazi prilikom otvaranja dijaloga i menija</li>
+    <li>Ispravke prikaza notifikacija i sortiranja termina</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.4.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Novi izgled podešavanja</strong> – Redizajniran dijalog sa preglednijom navigacijom</li>
+    <li><strong>Informacije o profilu</strong> – Studenti sada imaju uvid u kompletan profil</li>
+    <li><strong>Deaktivacija naloga</strong> – Mogućnost trajnog deaktiviranja sopstvenog naloga</li>
+    <li>Ujednačen stil dugmadi kroz celu aplikaciju</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.3.0</span>
+    <span class="ev-date">Mart 2026</span>
+  </div>
+  <ul>
+    <li><strong>Tabele bodova</strong> – Dinamičke tabele za evidentiranje bodova po kolokvijumima, projektima i aktivnostima</li>
+    <li><strong>Izvoz u PDF</strong> – Tabele bodova mogu se izvesti sa sažetkom i statistikom</li>
+    <li><strong>Upravljanje asistentima</strong> – Dodavanje i uklanjanje asistenata na predmetu</li>
+    <li><strong>Notifikacije</strong> – Pregled nepročitanih poruka i obaveštenja</li>
+    <li><strong>Paginacija i pretraga</strong> – Brže snalaženje u dužim listama studenata i sesija</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.2.0</span>
+    <span class="ev-date">Februar 2026</span>
+  </div>
+  <ul>
+    <li><strong>QR kod skeniranje</strong> – Brza evidencija prisustva skeniranjem QR koda</li>
+    <li><strong>Student dashboard</strong> – Pregled prisustva po predmetima sa vizuelnim prikazom</li>
+    <li><strong>Statistike</strong> – Grafikoni prisustva, distribucije i trendovi</li>
+    <li><strong>Tamna tema</strong> – Podrška za svetli i tamni prikaz aplikacije</li>
+    <li>Filteri po datumu i tipu sesije na stranici prisustava</li>
+  </ul>
+</div>
+
+<div class="ev-release">
+  <div class="ev-release-header">
+    <span class="ev-version">v1.1.0</span>
+    <span class="ev-date">Januar 2026</span>
+  </div>
+  <ul>
+    <li><strong>Prva stabilna verzija</strong> – Inicijalno pokretanje aplikacije Evidentiraj</li>
+    <li><strong>Prijava i registracija</strong> – Podrška za studente i asistente</li>
+    <li><strong>Upravljanje predmetima</strong> – Kreiranje, uređivanje i arhiviranje predmeta</li>
+    <li><strong>Evidencija prisustva</strong> – Termini i praćenje prisustva studenata</li>
+    <li><strong>Izveštaji</strong> – Izvoz izveštaja o prisustvu u PDF formatu</li>
+    <li><strong>Responsive dizajn</strong> – Prilagođen prikaz na svim uređajima</li>
+  </ul>
+</div>
+
+<style>
+  .ev-release { 
+    margin-bottom: 28px; 
+    padding-bottom: 24px; 
+    border-bottom: 1px solid var(--s-border);
+  }
+  .ev-release:last-of-type { 
+    border-bottom: none; 
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+  }
+  .ev-release-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 14px; 
+    flex-wrap: wrap; 
+  }
+  .ev-version { 
+    font-size: 14px; 
+    font-weight: 700; 
+    color: var(--s-text);
+    font-family: ui-monospace, monospace;
+    background: var(--s-surface);
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--s-border);
+  }
+  .ev-date { 
+    font-size: 11px; 
+    color: var(--s-muted); 
+    margin-left: auto;
+  }
+  .ev-badge { 
+    font-size: 10px; 
+    font-weight: 600; 
+    padding: 3px 10px; 
+    border-radius: 20px;
+  }
+  .ev-badge-latest { 
+    background: rgba(34,197,94,0.12); 
+    color: #22c55e; 
+    border: 1px solid rgba(34,197,94,0.25);
+  }
+  .ev-release ul { 
+    padding-left: 0; 
+    list-style: none; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+  }
+  .ev-release li { 
+    font-size: 13px; 
+    color: var(--s-text-soft); 
+    padding-left: 22px; 
+    position: relative; 
+    line-height: 1.5;
+  }
+  .ev-release li::before { 
+    content: "•";
+    position: absolute; 
+    left: 4px; 
+    color: var(--s-accent);
+    font-size: 12px;
+  }
+  .ev-release li strong {
+    color: var(--s-text);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 640px) {
+    .ev-release {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+    }
+    .ev-release li {
+      font-size: 12px;
+      padding-left: 18px;
+    }
+    .ev-release li::before {
+      left: 2px;
+    }
+    .ev-version {
+      font-size: 12px;
+    }
+  }
+</style>
